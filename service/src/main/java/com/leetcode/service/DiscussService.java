@@ -6,9 +6,9 @@ import com.leetcode.model.response.APIResponse;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface DiscussService {
-    APIResponse getDiscussions(PageReqBody req);
+    APIResponse getTopics(PageReqBody req);
 
-    APIResponse getTopic(String problemUri, int topicId);
+    APIResponse getTopic(int topicId, String cookies);
 
     APIResponse createTopic(TopicReqBody req);
 
@@ -16,5 +16,5 @@ public interface DiscussService {
 
     APIResponse deleteTopic(TopicReqBody req);
 
-    APIResponse uploadImage(String uri, String refer, String cookie, MultipartFile file);
+    APIResponse uploadImage(String uri, String refer, String cookies, MultipartFile file);
 }
